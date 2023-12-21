@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:tasks/assets/constants/colors.dart';
+import 'package:tasks/features/home/home.dart';
 import 'package:tasks/tasks/models/priority.dart';
 
 import '../bloc/task_bloc.dart';
@@ -104,6 +106,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                   const Gap(10),
                   Expanded(
                     child: TextField(
+                      style: const TextStyle(color: white),
                       controller: titleController,
                     ),
                   ),
@@ -224,6 +227,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                 ),
               ),
               TextField(
+                style: const TextStyle(color: white),
                 controller: noteController,
               ),
               const Spacer(),
@@ -243,7 +247,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                         },
                         content: Text(
                           'Icon cannot be null',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: black),
                         ),
                         actions: [SizedBox()],
                       ),
@@ -260,7 +264,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                         },
                         content: const Text(
                           'Start date cannot be null',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: black),
                         ),
                         actions: const [SizedBox()],
                       ),
@@ -277,7 +281,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                         },
                         content: const Text(
                           'Due date cannot be null',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: black),
                         ),
                         actions: [SizedBox()],
                       ),
@@ -294,7 +298,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                         },
                         content: Text(
                           'Priority date cannot be null',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: black),
                         ),
                         actions: [SizedBox()],
                       ),
@@ -311,7 +315,9 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                           note: noteController.text,
                           priority: priority!,
                           onSuccess: () {
-                            Navigator.of(context).pop();
+                            Navigator.of(context).pop(MaterialPageRoute(
+                              builder: (context) => HomeScreen(),
+                            ));
                           },
                           onFailure: (errorMessage) {
                             ScaffoldMessenger.of(context).showMaterialBanner(

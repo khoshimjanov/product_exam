@@ -3,12 +3,13 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 const white = _white;
+const red = Colors.red;
 const black = _black;
 const navigationBarBackgroundColor = _dark;
 const activeColor = _accentBlue;
 const inactiveColor = _whitish;
 const scaffoldBackgroundColor = _darkish;
-const backgroundColor=  Color.fromRGBO(19, 21, 36, 1);
+const backgroundColor = Color.fromRGBO(19, 21, 36, 1);
 const appBarColor = _darkish;
 const onPrimaryColor = _whitish;
 const secondaryColor = _tuna;

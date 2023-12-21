@@ -314,11 +314,11 @@ class Notes extends StatelessWidget {
                 onDismissed: (direction) {},
                 background: Container(
                   alignment: Alignment.centerRight,
-                  color: Colors.red,
+                  // color: Colors.red,
                   padding: EdgeInsets.only(right: 20),
                   child: Icon(
                     Icons.delete,
-                    color: white,
+                    color: red,
                   ),
                 ),
                 child: Container(
@@ -367,10 +367,9 @@ class Notes extends StatelessWidget {
                 background: Container(
                   padding: EdgeInsets.only(right: 20),
                   alignment: Alignment.centerRight,
-                  color: Colors.red,
                   child: Icon(
                     Icons.delete,
-                    color: white,
+                    color: red,
                   ),
                 ),
                 child: Container(
@@ -420,10 +419,9 @@ class Notes extends StatelessWidget {
                 background: Container(
                   padding: EdgeInsets.only(right: 20),
                   alignment: Alignment.centerRight,
-                  color: Colors.red,
                   child: Icon(
                     Icons.delete,
-                    color: white,
+                    color: red,
                   ),
                 ),
                 child: Container(
@@ -487,10 +485,9 @@ class Notes extends StatelessWidget {
                 background: Container(
                   padding: EdgeInsets.only(right: 20),
                   alignment: Alignment.centerRight,
-                  color: Colors.red,
                   child: Icon(
                     Icons.delete,
-                    color: white,
+                    color: red,
                   ),
                 ),
                 child: Container(

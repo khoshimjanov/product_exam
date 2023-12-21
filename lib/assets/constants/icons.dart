@@ -49,6 +49,7 @@ sealed class AppIcons {
   static const trash = '${_tasks}trash.svg';
   static const voice = '${_tasks}voice.svg';
   static const add = '${_tasks}add.svg';
+  static const doneIcon = '${_tasks}done_icon.svg';
     // ------------------  Global Folder  
   static const baseline = '${_tasks}baseline.svg';
   //________________________drawer--------------------------//

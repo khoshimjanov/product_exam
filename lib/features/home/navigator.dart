@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:tasks/tasks/presentation/create_task_screen.dart';
 import 'package:tasks/tasks/presentation/tasks_screen.dart';
-
-import '../tasks/presentation/tasks_screen.dart';
 import 'home.dart';
 
 class TabNavigatorRoutes {
@@ -19,6 +17,7 @@ class TabNavigator extends StatefulWidget {
   final NavItemEnum tabItem;
 
   @override
+  // ignore: library_private_types_in_public_api
   _TabNavigatorState createState() => _TabNavigatorState();
 }
 
@@ -58,14 +57,12 @@ class _TabNavigatorState extends State<TabNavigator>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-
     return Navigator(
       key: widget.navigatorKey,
       initialRoute: TabNavigatorRoutes.root,
       onGenerateRoute: (routeSettings) {
         final routeBuilders =
             _routeBuilders(context: context, settings: routeSettings);
-
         return CupertinoPageRoute<dynamic>(
           builder: (context) => routeBuilders.containsKey(routeSettings.name)
               ? routeBuilders[routeSettings.name]!(
