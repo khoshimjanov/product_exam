@@ -315,7 +315,7 @@ class _CreateTaskScreenState extends State<CreateTaskScreen> {
                           note: noteController.text,
                           priority: priority!,
                           onSuccess: () {
-                            Navigator.of(context).pop(MaterialPageRoute(
+                            Navigator.of(context).pushReplacement(MaterialPageRoute(
                               builder: (context) => HomeScreen(),
                             ));
                           },
